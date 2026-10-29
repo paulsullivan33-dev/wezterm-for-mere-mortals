@@ -1,0 +1,51 @@
+$ wezterm-mux-server --help (head)
+Wez's Terminal Emulator
+http://github.com/wez/wezterm
+
+Usage: wezterm-mux-server [OPTIONS] [PROG]...
+
+Arguments:
+  [PROG]...  Instead of executing your shell, run PROG. For example: `wezterm start -- bash -l` will
+             spawn bash as if it were a login shell
+
+Options:
+  -n, --skip-config                Skip loading wezterm.lua
+      --config-file <CONFIG_FILE>  Specify the configuration file to use, overrides the normal
+
+$ wezterm-mux-server --daemonize
+[exit: 0]
+
+$ wezterm cli spawn -- bash -c "echo FIRST_PANE_MARKER; sleep 45"
+17:36:04.371  ERROR  wezterm > --pane-id was not specified and $WEZTERM_PANE
+                         is not set in the environment, and I couldn't
+                         determine which pane was currently focused; terminating
+
+$ wezterm cli list
+WINID TABID PANEID WORKSPACE SIZE  TITLE CWD               
+    0     0      0 default   80x24 bash  file:///home/hatch
+
+$ wezterm cli get-text --pane-id 0
+root@htch-runtime:~# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

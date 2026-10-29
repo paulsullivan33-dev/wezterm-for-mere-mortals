@@ -1,0 +1,23 @@
+$ wezterm --config-file configs/good.lua show-keys | grep -E "F9|SplitHorizontal"
+	ALT | CTRL           %                  ->   SplitHorizontal(SpawnCommand domain=CurrentPaneDomain)
+	SHIFT | ALT | CTRL   %                  ->   SplitHorizontal(SpawnCommand domain=CurrentPaneDomain)
+	SHIFT | ALT | CTRL   5                  ->   SplitHorizontal(SpawnCommand domain=CurrentPaneDomain)
+	CTRL                 H                  ->   SplitHorizontal(SpawnCommand domain=CurrentPaneDomain)
+	                     F9                 ->   ToggleFullScreen
+
+$ wezterm --config-file configs/good.lua ls-fonts | head -8
+Primary font:
+wezterm.font_with_fallback({
+  -- <built-in>, BuiltIn
+  "JetBrains Mono",
+
+  -- /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf, FontConfig
+  -- Assumed to have Emoji Presentation
+  -- Pixel sizes: [128]
+
+$ wezterm --config font_size=20 --config-file configs/good.lua show-keys --lua | head -5 (checking override parses)
+local wezterm = require 'wezterm'
+local act = wezterm.action
+
+return {
+  keys = {

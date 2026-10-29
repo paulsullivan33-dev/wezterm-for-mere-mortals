@@ -1,0 +1,15 @@
+===== broken-syntax.lua under GUI (Xvfb) =====
+17:49:15.373  ERROR  mux::connui > Configuration Error: syntax error: [string "configs/broken-syntax.lua"]:4: unexpected symbol near 'return'
+[timeout-killed after 8s GUI run]
+
+===== broken-type.lua under GUI (Xvfb) =====
+17:49:23.133  ERROR  mux::connui > Configuration Error: error converting Lua table to Config (Config::from_dynamic: Error processing Config::font_size: Cannot convert `String` to `f64`.
+{
+    "font_size": "enormous",
+})
+stack traceback:
+	[C]: in metamethod 'newindex'
+	[string "configs/broken-type.lua"]:3: in main chunk
+
+[timeout-killed after 8s GUI run]
+

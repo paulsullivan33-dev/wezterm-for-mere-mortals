@@ -1,0 +1,7 @@
+--- default table: F9 / ToggleFullScreen lines ---
+6:	ALT                  Enter              ->   ToggleFullScreen
+--- good config table: F9 line ---
+139:	                     F9                 ->   ToggleFullScreen
+--- line counts: default vs good ---
+268
+270

@@ -1,0 +1,27 @@
+site_name: WezTerm for Mere Mortals
+site_description: A GPU-accelerated terminal emulator with tabs, panes and a built-in multiplexer. Installing WezTerm, configuring it in Lua, checking a configuration before trusting it, and driving the multiplexer from scripts, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/wezterm-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What WezTerm Is: what-wezterm-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing WezTerm: installing-wezterm.md
+  - Your First Window: your-first-window.md
+  - The Configuration File: the-configuration-file.md
+  - Tabs, Panes and the Multiplexer: tabs-panes-and-the-multiplexer.md
+  - Keys and the Launcher: keys-and-the-launcher.md
+  - Fonts and Appearance: fonts-and-appearance.md
+  - SSH Domains: ssh-domains.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

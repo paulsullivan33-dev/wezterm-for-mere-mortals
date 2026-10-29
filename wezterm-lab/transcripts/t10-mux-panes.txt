@@ -1,0 +1,33 @@
+$ wezterm cli spawn --pane-id 0 -- bash -c "echo NEW_TAB_MARKER; sleep 45"
+1
+
+$ wezterm cli list
+WINID TABID PANEID WORKSPACE SIZE  TITLE CWD               
+    0     0      0 default   80x24 bash  file:///home/hatch
+    0     1      1 default   80x24 sleep file:///home/hatch
+
+$ wezterm cli split-pane --pane-id 1 -- bash -c "echo SPLIT_PANE_MARKER; sleep 45"
+2
+
+$ wezterm cli list
+WINID TABID PANEID WORKSPACE SIZE  TITLE CWD               
+    0     0      0 default   80x24 bash  file:///home/hatch
+    0     1      1 default   80x11 sleep file:///home/hatch
+    0     1      2 default   80x12 sleep file:///home/hatch
+
+$ wezterm cli get-text --pane-id 1
+NEW_TAB_MARKER
+
+
+
+$ wezterm cli get-text --pane-id 2
+SPLIT_PANE_MARKER
+
+
+
+$ wezterm cli send-text --pane-id 0 "echo SENT_TEXT_MARKER" + Enter
+$ wezterm cli get-text --pane-id 0 | head -4
+root@htch-runtime:~# echo SENT_TEXT_MARKER
+
+
+

@@ -1,0 +1,14 @@
+$ wezterm --config-file configs/good.lua start --always-new-process -- bash -c "echo HELLO_FROM_PANE; sleep 60"
+17:34:59.771  ERROR  window::os::x11::connection > error fetching window manager name: empty list of windows
+17:34:59.780  WARN   window::os::x11::connection > Unable to resolve appearance using xdg-desktop-portal: get_appearance.read_setting: I/O error: No such file or directory (os error 2): No such file or directory (os error 2)
+17:34:59.819  ERROR  wezterm_gui::frontend       > Failed to create window: with_egl_lib failed: libEGL.so.1: libEGL.so.1: cannot open shared object file: No such file or directory, libEGL.so: libEGL.so: cannot open shared object file: No such file or directory, libEGL.so.1: libEGL.so.1: cannot open shared object file: No such file or directory, libEGL.so: libEGL.so: cannot open shared object file: No such file or directory
+[start exit: 0]
+
+$ wezterm cli list
+17:35:04.158  WARN   wezterm_client::client > While connecting to Socket("/home/hatch/workspace/wezterm-for-mere-mortals/wezterm-lab/run/wezterm/sock"): connecting to /home/hatch/workspace/wezterm-for-mere-mortals/wezterm-lab/run/wezterm/sock.  Will try spawning the server.
+17:35:04.159  WARN   wezterm_client::client > Running: "/home/hatch/workspace/wezterm-for-mere-mortals/wezterm-lab/tool/wezterm/usr/bin/wezterm-mux-server" "--daemonize"
+WINID TABID PANEID WORKSPACE SIZE  TITLE CWD               
+    0     0      0 default   80x24 bash  file:///home/hatch
+
+$ wezterm cli list-clients
+USER HOST PID CONNECTED IDLE WORKSPACE FOCUS

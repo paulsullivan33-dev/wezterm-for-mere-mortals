@@ -1,0 +1,50 @@
+$ wezterm cli get-text --pane-id 0 (full)
+root@htch-runtime:~# echo SENT_TEXT_MARKER
+
+
+
+
+
+
+$ wezterm cli set-tab-title --tab-id 1 Lab Tab ; cli list
+WINID TABID PANEID WORKSPACE SIZE  TITLE CWD               
+    0     0      0 default   80x24 bash  file:///home/hatch
+    0     1      1 default   80x11 sleep file:///home/hatch
+    0     1      2 default   80x12 sleep file:///home/hatch
+
+$ wezterm cli kill-pane --pane-id 2 ; cli list
+WINID TABID PANEID WORKSPACE SIZE  TITLE CWD               
+    0     0      0 default   80x24 bash  file:///home/hatch
+    0     1      1 default   80x24 sleep file:///home/hatch
+
+$ wezterm cli --help
+Interact with experimental mux server
+
+Usage: wezterm cli [OPTIONS] <COMMAND>
+
+Commands:
+  list                     list windows, tabs and panes
+  list-clients             list clients
+  proxy                    start rpc proxy pipe
+  tlscreds                 obtain tls credentials
+  move-pane-to-new-tab     Move a pane into a new tab
+  split-pane               split the current pane.
+                               Outputs the pane-id for the newly created pane on success
+  spawn                    Spawn a command into a new window or tab
+                               Outputs the pane-id for the newly created pane on success
+  send-text                Send text to a pane as though it were pasted. If bracketed paste mode
+                               is enabled in the pane, then the text will be sent as a bracketed
+                               paste
+  get-text                 Retrieves the textual content of a pane and output it to stdout
+  activate-pane-direction  Activate an adjacent pane in the specified direction
+  get-pane-direction       Determine the adjacent pane in the specified direction
+  kill-pane                Kill a pane
+  activate-pane            Activate (focus) a pane
+  adjust-pane-size         Adjust the size of a pane directionally
+  activate-tab             Activate a tab
+  set-tab-title            Change the title of a tab
+  set-window-title         Change the title of a window
+  rename-workspace         Rename a workspace
+  zoom-pane                Zoom, unzoom, or toggle zoom state
+  help                     Print this message or the help of the given subcommand(s)
+

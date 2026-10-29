@@ -1,0 +1,32 @@
+===== broken-syntax.lua =====
+[exit code: 0] [stdout lines: 268]
+--- stderr ---
+--- stdout tail ---
+	               Up { streak: 2, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+	               Up { streak: 3, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+
+
+===== broken-runtime.lua =====
+[exit code: 0] [stdout lines: 268]
+--- stderr ---
+--- stdout tail ---
+	               Up { streak: 2, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+	               Up { streak: 3, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+
+
+===== broken-type.lua =====
+[exit code: 0] [stdout lines: 268]
+--- stderr ---
+--- stdout tail ---
+	               Up { streak: 2, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+	               Up { streak: 3, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+
+
+===== does-not-exist.lua =====
+[exit code: 0] [stdout lines: 268]
+--- stderr ---
+--- stdout tail ---
+	               Up { streak: 2, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+	               Up { streak: 3, button: Left }       ->   CompleteSelection(ClipboardAndPrimarySelection)
+
+

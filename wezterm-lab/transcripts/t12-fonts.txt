@@ -1,0 +1,29 @@
+$ wezterm ls-fonts --text "Hi" (NUL padding stripped)
+LeftToRight
+ 0 H    \u{48}       x_adv=10 cells=1  glyph=H,64   wezterm.font("JetBrains Mono", {weight="Regular", stretch="Normal", style="Normal"})
+                                      <built-in>, BuiltIn
+ 1 i    \u{69}       x_adv=10 cells=1  glyph=i,255  wezterm.font("JetBrains Mono", {weight="Regular", stretch="Normal", style="Normal"})
+                                      <built-in>, BuiltIn
+
+$ wezterm ls-fonts --codepoints 2764    # a heavy black heart
+LeftToRight
+ 0 ❤    \u{2764}     x_adv=10 cells=1  glyph=uni2764,2883 wezterm.font("DejaVu Sans Mono", {weight="Book", stretch="Normal", style="Normal"})
+                                      /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf, FontConfig
+
+Reading it: the heart is NOT in the built-in JetBrains Mono, so
+WezTerm fell back to DejaVu Sans Mono, found on the system by
+FontConfig. That fallback chain is what ls-fonts exists to expose.
+
+$ wezterm --config-file configs/font-dejavu.lua ls-fonts | head -12
+Primary font:
+wezterm.font_with_fallback({
+  -- /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf, FontConfig
+  {family="DejaVu Sans Mono", weight="Book"},
+
+  -- <built-in>, BuiltIn
+  "JetBrains Mono",
+
+  -- /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf, FontConfig
+  -- Assumed to have Emoji Presentation
+  -- Pixel sizes: [128]
+  "Noto Color Emoji",

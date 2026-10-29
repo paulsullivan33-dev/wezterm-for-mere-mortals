@@ -1,0 +1,25 @@
+$ tar tf wezterm-20240203-110809-5046fc22.Ubuntu22.04.tar.xz | awk -F/ "{print \$2\"/\"\$3}" | sort -u | head -20
+/
+DEBIAN/
+DEBIAN/control
+DEBIAN/postinst
+DEBIAN/prerm
+etc/
+etc/profile.d
+usr/
+usr/bin
+usr/share
+
+$ ls -la the three programs
+total 123316
+drwxr-xr-x 1 root root      142 Feb  3  2024 .
+drwxr-xr-x 1 root root       16 Feb  3  2024 ..
+-rwxr-xr-x 1 root root      220 Feb  3  2024 open-wezterm-here
+-rwxr-xr-x 1 root root  1276288 Feb  3  2024 strip-ansi-escapes
+-rwxr-xr-x 1 root root 25157704 Feb  3  2024 wezterm
+-rwxr-xr-x 1 root root 73901152 Feb  3  2024 wezterm-gui
+-rwxr-xr-x 1 root root 25924616 Feb  3  2024 wezterm-mux-server
+
+$ sha256sum of the downloaded tarball, against the published .sha256
+142cb46de648200b852cc4b1d932e6b8f2a9d3c55f6dc5af44b6d4eeb9385f5c  wezterm-20240203-110809-5046fc22.Ubuntu22.04.tar.xz
+142cb46de648200b852cc4b1d932e6b8f2a9d3c55f6dc5af44b6d4eeb9385f5c  tool/wezterm-20240203-110809-5046fc22.Ubuntu22.04.tar.xz

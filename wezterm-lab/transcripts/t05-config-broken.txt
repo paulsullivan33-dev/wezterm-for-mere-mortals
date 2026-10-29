@@ -1,0 +1,33 @@
+===== broken-syntax.lua via show-keys =====
+Default key table
+-----------------
+
+	CTRL                 Tab                ->   ActivateTabRelative(1)
+	SHIFT | CTRL         Tab                ->   ActivateTabRelative(-1)
+	ALT                  Enter              ->   ToggleFullScreen
+[exit: 101]
+
+===== broken-runtime.lua via show-keys =====
+Default key table
+-----------------
+
+	CTRL                 Tab                ->   ActivateTabRelative(1)
+	SHIFT | CTRL         Tab                ->   ActivateTabRelative(-1)
+	ALT                  Enter              ->   ToggleFullScreen
+[exit: 0]
+
+===== broken-type.lua via show-keys =====
+Default key table
+-----------------
+
+	CTRL                 Tab                ->   ActivateTabRelative(1)
+	SHIFT | CTRL         Tab                ->   ActivateTabRelative(-1)
+	ALT                  Enter              ->   ToggleFullScreen
+[exit: 101]
+
+===== missing file =====
+Default key table
+-----------------
+
+	CTRL                 Tab                ->   ActivateTabRelative(1)
+[exit: 0]

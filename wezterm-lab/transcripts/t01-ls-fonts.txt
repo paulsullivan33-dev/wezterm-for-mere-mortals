@@ -1,0 +1,43 @@
+$ wezterm ls-fonts (first 25 lines)
+Primary font:
+wezterm.font_with_fallback({
+  -- <built-in>, BuiltIn
+  "JetBrains Mono",
+
+  -- /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf, FontConfig
+  -- Assumed to have Emoji Presentation
+  -- Pixel sizes: [128]
+  "Noto Color Emoji",
+
+  -- <built-in>, BuiltIn
+  "Symbols Nerd Font Mono",
+
+})
+
+
+When Intensity=Half Italic=true:
+wezterm.font_with_fallback({
+  -- <built-in>, BuiltIn
+  -- AKA: "JetBrains Mono ExtraLight"
+  {family="JetBrains Mono", weight="ExtraLight", style="Italic"},
+
+  -- <built-in>, BuiltIn
+  "JetBrains Mono",
+
+
+$ wezterm ls-fonts --list-system (first 15 lines)
+Primary font:
+wezterm.font_with_fallback({
+  -- <built-in>, BuiltIn
+  "JetBrains Mono",
+
+  -- /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf, FontConfig
+  -- Assumed to have Emoji Presentation
+  -- Pixel sizes: [128]
+  "Noto Color Emoji",
+
+  -- <built-in>, BuiltIn
+  "Symbols Nerd Font Mono",
+
+})
+

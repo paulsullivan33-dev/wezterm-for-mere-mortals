@@ -1,0 +1,13 @@
+$ Xvfb :99 &  (virtual display, 1280x800)
+$ wezterm --config-file configs/good.lua start --always-new-process \
+    -- bash -c "echo gui pane ran this > gui-proof.txt; sleep 40"
+  (with Mesa software-rendering libraries on LD_LIBRARY_PATH)
+17:50:13.940  ERROR  window::os::x11::connection > error fetching window manager name: empty list of windows
+17:50:13.943  WARN   window::os::x11::connection > Unable to resolve appearance using xdg-desktop-portal: get_appearance.read_setting: I/O error: No such file or directory (os error 2): No such file or directory (os error 2)
+[killed by the 10s timeout: exit 124 — the GUI stays in the foreground]
+
+$ cat gui-proof.txt
+gui pane ran this
+
+Reading it: the window was created (no EGL failure this time) and the
+program inside the pane really ran — its output file exists.

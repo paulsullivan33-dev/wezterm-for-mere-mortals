@@ -1,0 +1,8 @@
+===== (a) default config location probe =====
+17:49:45.863  ERROR  mux::connui > Configuration Error: syntax error: [string "/home/hatch/.config/wezterm/wezterm.lua"]:4: unexpected symbol near 'return'
+(probe file removed again)
+
+===== (b) live reload: break the config while the GUI runs =====
+(config replaced with the broken one at +6s)
+17:49:59.828  ERROR  mux::connui                 > Configuration Error: syntax error: [string "reload-test.lua"]:4: unexpected symbol near 'return'
+17:50:00.033  ERROR  mux::connui                 > Configuration Error: syntax error: [string "reload-test.lua"]:4: unexpected symbol near 'return'
